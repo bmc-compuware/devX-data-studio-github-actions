@@ -55,14 +55,7 @@ jobs:
       - name: Mvs2Db2Extract
         run: C:\TopazCLI\TedCLI.bat  -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -cmd=execute -repository=FileAIDExplorerJubula -specification=Mvs2Db2Extract_LoadTest  -specification-type=extract -hid=faexrec -hpw=cpwrexdp -execution-timeout=60 
         
-    # Runs a single command using the runners shell
-      - name: RdxLoad_FilesAndTables
-        run: C:\TopazCLI\TedCLI.bat  -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -cmd=execute -repository=FileAIDExplorerJubula -specification=RdxLoad_FilesAndTables_New -specification-type=load -execution-timeout=60 
-        
-    # Runs a single command using the runners shell
-      - name: ConverterProSpec1
-        run: C:\TopazCLI\TedCLI.bat  -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -cmd=execute -repository=FileAIDExplorerJubula -specification-list="ConverterProSpec1_CLI convert EMPPROJACT_CLI extract Mvs2Db2Extract_LoadTest extract" -hid=faexrec -hpw=cpwrexdp -exit-on-failure=true 
-        
+      
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
