@@ -34,7 +34,11 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: C:\TopazCLI\TedCLI.bat -cmd=execute -repository=FileAIDExplorerJubula -specification=ComparePro_CLI -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -specification-type=compare  -rr=EXRVRESULTS 
-
+     
+     # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: C:\TopazCLI\TedCLI.bat -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -cmd=execute -repository=FileAIDExplorerJubula -specification=ConverterProSpec1_CLI  -specification-type=convert 
+      
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
