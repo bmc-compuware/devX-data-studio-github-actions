@@ -53,7 +53,7 @@ jobs:
       
     # Runs a single command using the runners shell
       - name: Mvs2Db2Extract
-        run: C:\TopazCLI\TedCLI.bat  -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -cmd=execute -repository=FileAIDExplorerJubula -specification=Mvs2Db2Extract_LoadTest  -specification-type=extract -hid=faexrec -hpw=cpwrexdp -execution-timeout=60 
+        run: C:\TopazCLI\TedCLI.bat  -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -cmd=execute -repository=FileAIDExplorerJubula -specification=Mvs2Db2Extract_LoadTest  -specification-type=extract -hid=C:\TopazCLI\EnterpriseData\faexrec -hpw=cpwrexdp -execution-timeout=60 
      
    # Runs a single command using the runners shell
       - name: RdxLoad_FilesAndTables
