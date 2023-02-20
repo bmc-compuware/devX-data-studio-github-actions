@@ -47,7 +47,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: [self-hosted, TED-CLI]
+    runs-on: [self-hosted, TEDCLI]
     env:
      HCI_PASSWORD: ${{ secrets.HCI_PASSWORD }}
     #runs-on: windows-latest
