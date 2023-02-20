@@ -16,37 +16,36 @@ on:
         description: GIT BRANCH FOR CHECKOUTS
         default: ""
         required: true
-      Gitbranch:
+      VM:
         # target_host input from the user.
         description: THE VM TO EXECUTE THE TESTS
         default: ""
         required: true
-      VM:
+      clipath:
         # Workspcae location of the customer input from the user.
         description: CLI path
         default: ""
         required: true
-      clipath:
+      respository:
         # repository server input from the user.
         description: repository
         default: ""
         required: true        
-      repository:
+      specification:
         # specification input from the user.
         description: specification
         default: ""
         required: true
-      specification:
+      execution-context:
         # execution-context server input from the user.
         description: execution-context
         default: ""
         required: true
-      execution-context:
+      specification-type:
       # specification type input from the user.
         description: specification type
         default: ""
         required: true
-      specification-type:
         
         
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
