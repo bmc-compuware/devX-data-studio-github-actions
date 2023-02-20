@@ -21,7 +21,6 @@ on:
         description: THE VM TO EXECUTE THE TESTS
         default: ""
         required: true
-      mail_recipients:
         # target_mailRecipients input from the user.
         description: EMAIL NOTIFICATION
         default: ""
