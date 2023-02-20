@@ -1,0 +1,92 @@
+# This is a basic workflow to help you get started with Actions for cli
+name: Topaz for Enterprise Data
+
+# Controls when the workflow will run
+on:  
+# Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      clirelease:
+        # target_release input from users
+        description: Topaz CLI release
+        default: ""
+        required: true
+      targetbranch:
+        # target_branch input from users
+        description: GIT BRANCH FOR CHECKOUTS
+        default: ""
+        required: true
+      host:
+        # target_host input from the user.
+        description: THE VM TO EXECUTE THE TESTS
+        default: ""
+        required: true
+      mail_recipients:
+        # target_mailRecipients input from the user.
+        description: EMAIL NOTIFICATION
+        default: ""
+        required: true
+      workspace:
+        # Workspcae location of the customer input from the user.
+        description: CLI path
+        default: ""
+        required: true        
+      repository_server:
+        # repository server input from the user.
+        description: Repository Server
+        default: ""
+        required: true
+      Repository:
+        # repository server input from the user.
+        description: Repository URL
+        default: ""
+        required: true
+        
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: [self-hosted, TED-CLI]
+    env:
+     HCI_PASSWORD: ${{ secrets.HCI_PASSWORD }}
+    #runs-on: windows-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - run: git config --global core.longpaths true     
+     
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+          
+      # Runs a single command using the runners shell
+      - name: ComparePro
+        run: C:\TopazCLI\TedCLI.bat -cmd=execute -repository=FileAIDExplorerJubula -specification=ComparePro_CLI -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -specification-type=compare  -rr=EXRVRESULTS 
+     
+     # Runs a single command using the runners shell
+      - name: ConverterPro
+        run: C:\TopazCLI\TedCLI.bat -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -cmd=execute -repository=FileAIDExplorerJubula -specification=ConverterProSpec1_CLI  -specification-type=convert 
+     
+      # Runs a single command using the runners shell
+      - name: ExecutionSuite
+        run: C:\TopazCLI\TedCLI.bat -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -cmd=execute -repository=FileAIDExplorerJubula -specification=ExecutionSuiteCLI  -specification-type=exsuite 
+     
+     # Runs a single command using the runners shell
+      - name: EMPPROJACT_Extract
+        run: C:\TopazCLI\TedCLI.bat -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -cmd=execute -repository=FileAIDExplorerJubula -specification=EMPPROJACT_CLI  -specification-type=extract 
+      
+     # Runs a single command using the runners shell
+      - name: EMPPROJACT_Load
+        run: C:\TopazCLI\TedCLI.bat -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -cmd=execute -repository=FileAIDExplorerJubula -specification=EMPPROJACT_CLI  -specification-type=load 
+      
+    # Runs a single command using the runners shell
+      - name: Mvs2Db2Extract
+        run: C:\TopazCLI\TedCLI.bat  -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -cmd=execute -repository=FileAIDExplorerJubula -specification=Mvs2Db2Extract_LoadTest  -specification-type=extract -hid=faexrec -hpw=cpwrexdp -execution-timeout=60 
+     
+   # Runs a single command using the runners shell
+      - name: RdxLoad_FilesAndTables
+        run: C:\TopazCLI\TedCLI.bat  -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -cmd=execute -repository=FileAIDExplorerJubula -specification=RdxLoad_FilesAndTables_New -specification-type=load -execution-timeout=60 
+   
+    # Runs a single command using the runners shell
+      - name: ConverterProSpec1
+        run: C:\TopazCLI\TedCLI.bat  -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -cmd=execute -repository=FileAIDExplorerJubula -specification-list="ConverterProSpec1_CLI convert EMPPROJACT_CLI extract Mvs2Db2Extract_LoadTest extract" -hid=faexrec -hpw=cpwrexdp -exit-on-failure=true 
+    
