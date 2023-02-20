@@ -55,7 +55,6 @@ jobs:
     steps:
       - run: git config --global core.longpaths true     
      
-    steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
           
