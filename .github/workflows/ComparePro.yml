@@ -26,8 +26,8 @@ on:
         description: CLI path
         default: ""
         required: true
-      respository:
-        # repository server input from the user.
+      repository:
+        # repository input from the user.
         description: repository
         default: ""
         required: true        
@@ -62,6 +62,6 @@ jobs:
           
       # Runs a single command using the runners shell
       - name: ComparePro
-        run: ${{inputs.clipath}}\\TedCLI.bat -cmd=execute -repository="${{inputs.repository}}" -specification="${{inputs.specification}}" -execution-context="${{inputs.execution-context}}" -specification-type="${{inputs.specification-type}}"  -rr=EXRVRESULTS 
+        run: ${{inputs.clipath}}\TedCLI.bat -cmd=execute -repository="${{inputs.repository}}" -specification="${{inputs.specification}}" -execution-context="${{inputs.execution-context}}" -specification-type="${{inputs.specification-type}}"  -rr=EXRVRESULTS 
      
    
