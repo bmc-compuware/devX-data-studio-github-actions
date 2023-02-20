@@ -53,10 +53,8 @@ jobs:
     #runs-on: windows-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - run: git config --global core.longpaths true     
-     
-              
-      # Runs a single command using the runners shell
+      - run: git config --global core.longpaths true  
+    # Runs a single command using the runners shell
       - name: ComparePro
         run: C:\TopazCLI\TedCLI.bat -cmd=execute -repository=FileAIDExplorerJubula -specification=ComparePro_CLI -execution-context=C:\TopazCLI\EnterpriseData\TEDCLI_executioncontext.properties -specification-type=compare  -rr=EXRVRESULTS 
      
