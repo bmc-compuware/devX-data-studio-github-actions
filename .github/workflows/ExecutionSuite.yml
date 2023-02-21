@@ -62,6 +62,6 @@ jobs:
     steps:
        # Runs a single command using the runners shell
       - name: ExecutionSuite
-        run: ${{inputs.clipath}}\TedCLI.bat -execution-context="${{inputs.execution-context}}" -cmd=execute -repository="${{inputs.repository}}" -specification="${{inputs.ExecutionSuiteCLI}}"  -specification-type="${{inputs.specification-type-ExecutionSuiteCLI}}" 
+        run: ${{inputs.clipath}}\TedCLI.bat -execution-context="${{inputs.execution-context}}" -cmd=execute -repository="${{inputs.repository}}" -specification="${{inputs.specification}}" -specification-type="${{inputs.specification-type}}" 
      
    
