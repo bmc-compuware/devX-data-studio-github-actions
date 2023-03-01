@@ -17,7 +17,7 @@ jobs:
     steps:
        # Runs a single command using the runners shell
               - name: Send some mail
-                uses: bmc-compuware/topaz-for-enterprise-data-github-actions@main
+                uses: actions/checkout@v3
                 with:    
                   server_address: smtp.gmail.com
                   port: 465      
