@@ -1,0 +1,63 @@
+# This is a basic workflow to help you get started with Actions for cli
+name: Multi Specification Execution
+
+# Controls when the workflow will run
+on:  
+# Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      clipath:
+        # Workspcae location of the customer input from the user.
+        description: CLI path
+        default: ""
+        required: true
+      repository:
+        # repository server input from the user.
+        description: repository
+        default: ""
+        required: true        
+      specification-list:
+        # specification input from the user.
+        description: specification-list
+        default: ""
+        required: true
+      execution-context:
+        # execution-context server input from the user.
+        description: execution-context
+        default: ""
+        required: true
+     
+      Port:
+        # target_release input from users
+        description: HCI UserID
+        default: ""
+        required: true
+      Password:
+        # target_branch input from users
+        description: Password
+        default: ""
+        required: true
+      TargetHost:
+        # target_host input from the user.
+        description: Target Host
+        default: ""
+        required: true
+      
+        
+        
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: [self-hosted, TEDCLI]
+    env:
+     HCI_PASSWORD: ${{ secrets.HCI_PASSWORD }}
+    #runs-on: windows-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+       # Runs a single command using the runners shell
+      - name: Multi_Specs
+        run: ${{inputs.clipath}} -execution-context="${{inputs.execution-context}}" -cmd=execute -repository="${{inputs.repository}}" -specification-list="${{inputs.specification-list}}" -hid="${{inputs.Port}}" -hpw="${{inputs.Password}}" -exit-on-failure=true
+       
+   
