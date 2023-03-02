@@ -35,7 +35,7 @@ on:
       Password:
         # target_branch input from users
         description: Password
-        default: ${{secrets.TEDPassword}}
+        default: ""
         required: true
       TargetHost:
         # target_host input from the user.
