@@ -35,8 +35,8 @@ on:
       Password:
         # target_branch input from users
         description: Password
-        default: ""
-        required: false
+        default: "${{ secrets.TEDPassword }}"
+        required: true
       TargetHost:
         # target_host input from the user.
         description: Target Host
@@ -58,6 +58,6 @@ jobs:
     steps:
        # Runs a single command using the runners shell
       - name: Multi_Specs
-        run: ${{inputs.clipath}} -execution-context="${{inputs.execution-context}}" -cmd=execute -repository="${{inputs.repository}}" -specification-list="${{inputs.specification-list}}" -hid="${{inputs.Port}}" -hpw="${{secrets.TEDPassword}}" -exit-on-failure=true
+        run: ${{inputs.clipath}} -execution-context="${{inputs.execution-context}}" -cmd=execute -repository="${{inputs.repository}}" -specification-list="${{inputs.specification-list}}" -hid="${{inputs.Port}}" -hpw="${{inputs.Password}}" -exit-on-failure=true
        
    
