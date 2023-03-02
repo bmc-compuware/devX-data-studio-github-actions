@@ -18,9 +18,7 @@ jobs:
        # Runs a single command using the runners shell
               - name: Send some mail
                 uses: actions/checkout@v2
-                with:    
-                  server_address: smtp.gmail.com
-                  port: 465      
+                with:          
                   subject: Github TEDCLI
                   body: Job completed  
                   to: vijay_sancheti@bmc.com, megha_ganguly@bmc.com
