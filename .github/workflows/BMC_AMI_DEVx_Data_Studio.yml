@@ -6,21 +6,6 @@ on:
 # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
-      Port:
-        # target_release input from users
-        description: HCI UserID
-        default: ""
-        
-      Password:
-        # target_branch input from users
-        description: Password
-        default: ""
-        
-      TargetHost:
-        # target_host input from the user.
-        description: Target Host
-        default: ""
-        required: true
       clipath:
         # Workspcae location of the customer input from the user.
         description: CLI path
@@ -46,7 +31,20 @@ on:
         description: specification type
         default: ""
         required: true
-
+      Port:
+        # target_release input from users
+        description: HCI UserID
+        default: ""
+      Password:
+        # target_branch input from users
+        description: Password
+        default: ""
+      TargetHost:
+        # target_host input from the user.
+        description: Target Host
+        default: ""
+        required: true
+      
         
         
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
