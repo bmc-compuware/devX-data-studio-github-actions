@@ -60,6 +60,6 @@ jobs:
     steps:
        # Runs a single command using the runners shell
       - name: TED_CLI
-        run: ${{inputs.clipath}}\TedCLI.bat  -execution-context="${{inputs.execution-context}}" -cmd=execute -repository="${{inputs.repository}}" -specification="${{inputs.specification}}"  -specification-type="${{inputs.specification-type}}" -hid="${{inputs.Port}}" -hpw="${{inputs.Password}}" -execution-timeout=60 
+        run: ${{inputs.clipath}} -execution-context="${{inputs.execution-context}}" -cmd=execute -repository="${{inputs.repository}}" -specification="${{inputs.specification}}"  -specification-type="${{inputs.specification-type}}" -hid="${{inputs.Port}}" -hpw="${{inputs.Password}}" -execution-timeout=60 
      
    
