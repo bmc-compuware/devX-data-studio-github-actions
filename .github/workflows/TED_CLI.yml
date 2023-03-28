@@ -53,6 +53,6 @@ jobs:
     steps:
        # Runs a single command using the runners shell
       - name: TED_CLI
-        run: ${{inputs.clipath}} -execution-context="${{inputs.execution-context}}" -cmd=execute -repository="${{inputs.repository}}" -specification-list="${{inputs.specification-list}}" -hid="${{inputs.Port}}" -hpw="cpwrexdp" -exit-on-failure=true
+        run: ${{inputs.clipath}} -execution-context="${{inputs.execution-context}}" -cmd=execute -repository="${{inputs.repository}}" -specification-list="${{inputs.specification-list}}" -hid="${{inputs.Port}}" -hpw="${{secrets.TEDPASSWORD}}" -exit-on-failure=true
        
    
