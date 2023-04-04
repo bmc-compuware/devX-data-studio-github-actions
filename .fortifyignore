@@ -1,5 +1,9 @@
 #The following files will be ignored while doing fortify scan
 
-#Ignore all config files
+target
+work
+.settings
 
-**/*.md
+#Ignore auto-generated files
+**/*.project
+**/*.classpath
