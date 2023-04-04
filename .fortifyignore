@@ -3,6 +3,3 @@
 #Ignore all config files
 
 **/*.md
-**/*.yml
-
-#testing
