@@ -1,0 +1,6 @@
+name: BMC AMI DevX Data Studio
+description: 'Execute specs using the TED_CLI'
+branding:
+  icon:  upload-cloud
+  color: orange
+author: BMC
