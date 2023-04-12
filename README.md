@@ -13,7 +13,7 @@ This allows your GitHub Actions workflow to execute an automated test using Tota
     * [Usage](https://github.com/marketplace/actions/bmc-ami-devx-data-studio/#Usage)
     * [Inputs](https://github.com/marketplace/actions/bmc-ami-devx-data-studio/#Inputs)
     * [Outputs](https://github.com/marketplace/actions/bmc-ami-devx-data-studio/#Outputs)
-    * [Troubleshooting](https://github.com/marketplace/bmc-ami-devx-data-studio/#Troubleshooting)
+    * [Troubleshooting](https://github.com/marketplace/actions/bmc-ami-devx-data-studio/#Troubleshooting)
     * [License summary](https://github.com/marketplace/actions/bmc-ami-devx-data-studio/#License%20summary)
     * [Product Assistance](https://github.com/marketplace/actions/bmc-ami-devx-data-studio/#Product%20Assistance)
 
