@@ -44,9 +44,9 @@ This allows your GitHub Actions workflow to execute an automated test using Tota
 | Input name | Required | Description |
 | --- | --- | --- |
 | CLI Execution path | Required  | CLI execution path is the location where it is installed locally, provide path till .bat folder  |
-| repository | Required  | File-AID Ex Repository where specification are stored |
-| specification-list | Required  | File-AID EX Specification Name & Type seperated by space |
-| execution-context | Required  | Context property file where all communication, exection host etc. details mentioned |
+| Repository | Required  | File-AID Ex Repository where specification are stored |
+| Specification Llist | Required  | File-AID EX Specification Name & Type seperated by space |
+| Execution Context | Required  | Context property file where all communication, exection host etc. details mentioned |
 | HCI UserID  | Required  | Provide your Mainframe User ID |
 | Target Host  | Required  | VM name where self-hosted runners is deplyed |
 | Password  | Required  | "Github Repository" -> Settings-> Secrets-> Actions-> New repository secret |
