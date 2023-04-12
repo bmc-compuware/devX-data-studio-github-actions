@@ -7,7 +7,7 @@ This allows your GitHub Actions workflow to execute an automated test using Tota
           
 # Table of Contents
 
-  * TED-CLI-Local
+  * DevX_Data-Studio-CLI-Local
     * [Table of Contents](https://github.com/marketplace/actions/bmc-ami-devx-data-studio/#Table%20of%20Contents)
     * [Prerequisite](https://github.com/marketplace/actions/bmc-ami-devx-data-studio/#Prerequisite)
     * [Usage](https://github.com/marketplace/actions/bmc-ami-devx-data-studio/#Usage)
@@ -44,12 +44,11 @@ This allows your GitHub Actions workflow to execute an automated test using Tota
 | Input name | Required | Description |
 | --- | --- | --- |
 | CLI Execution path | Required  | CLI execution path is the location where it is installed locally, provide path till .bat folder  |
-| HCI Connection | Required  | HCI connection required to connect the MF system |
-| HCI Connection Port  | Required  | HCI connection port is required to connect the system |
-| Test Location Path | Required  | Test location path is your local path where you test cases being executed |
-| workspace  | Required  | workspace is required for local setup |
-| repository_server  | Required  | Repository server is required to connect and get the data from the server |
-| User ID  | Required  | Provide your Mainframe User ID |
+| repository | Required  | File-AID Ex Repository where specification are stored |
+| specification-list | Required  | File-AID EX Specification Name & Type seperated by space |
+| execution-context | Required  | Context property file where all communication, exection host etc. details mentioned |
+| HCI UserID  | Required  | Provide your Mainframe User ID |
+| Target Host  | Required  | VM name where self-hosted runners is deplyed |
 | Password  | Required  | "Github Repository" -> Settings-> Secrets-> Actions-> New repository secret |
 
 
