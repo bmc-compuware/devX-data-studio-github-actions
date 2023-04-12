@@ -1,13 +1,13 @@
 # Overview
-The BMC AMI DevX Total Test extension can be used to execute either Unit or Functional test scenarios automatically. 
+The BMC AMI DevX Data Studio extension can be used to execute either Unit or Functional test scenarios automatically. 
 
-# BMC AMI DevX Total Test
+# BMC AMI DevX Data Studio
 
 This allows your GitHub Actions workflow to execute an automated test using Total Test. This action uses Total Test scenarios stored in your local Eclipse workspace. <br>
           
 # Table of Contents
 
-  * TTT-CLI-Local
+  * TED-CLI-Local
     * [Table of Contents](https://github.com/marketplace/actions/bmc-ami-devx-total-test/#Table%20of%20Contents)
     * [Prerequisite](https://github.com/marketplace/actions/bmc-ami-devx-total-test/#Prerequisite)
     * [Usage](https://github.com/marketplace/actions/bmc-ami-devx-total-test/#Usage)
@@ -26,15 +26,14 @@ This allows your GitHub Actions workflow to execute an automated test using Tota
 
 # Usage
 
-* Triggers the workflow to execute the provided test scenario on any pipeline where the BMC AMI DevX Total Test Auto Run is added. 
+* Triggers the workflow to execute the provided test scenario on any pipeline where the BMC AMI DevX Data Studio Auto Run is added. 
 * Steps to use the extension
   * Install the BMC AMI DevX workbench CLI into local system, Click [here](https://download.api.compuware.com/web/private/66jvM2Rf5dcHtVjXdYhudGtRn9CtHzYq/test-management/results.html).
   * CLI Execution path - Go to the local drive of a system and check the .bat file location i.e "C:\\BMC AMI DevX\\topazworkbenchcli.20.12.03.134\\".
   * HCI Connection - Provide the HCI connection i.e CW01.bmc.com
   * Port - Provide the HCI connection port number i.e 16196
   * Test Location Path - Test location path is your local path where you test cases being executed i.e    "C:\\Users\\your_username\\BMC\\Workbench\\workspace\\CLI_CWKTCOBX\\Tests\\Scenarios"
-  * CLI path - Provide the CLI path where a workspace available i.e. "C:\\Users\\your_username\\git\\TTT\\work\\workspace\\Security_Vulnerability\\TopazCliWkspc"
-  * Repository server - Provide the repository server location i.e. "http://vw-dtw-xat-01.adprod.bmc.com:48231/totaltestapi/"
+  * CLI path - Provide the CLI path where a workspace available i.e. "C:\\Users\\your_username\\git\\TED\\work\\workspace\\Security_Vulnerability\\TopazCliWkspc"
   * HCI user id - Provide you user id which can connect to MF
   * Password - Configure you MF password in "Github Repository" -> Settings-> Secrets-> Actions-> New repository secret
      
@@ -64,7 +63,7 @@ To enable debug logging in your GitHub actions workflow, see the guide [here](ht
 
 # License summary
 
-This code is made available under the BMC license, Click [here](https://github.com/bmc-compuware/TTT-CLI-Local/blob/main/LICENSE.txt).
+This code is made available under the BMC license, Click [here](https://github.com/bmc-compuware/devX-data-studio-github-actions/blob/main/LICENSE.txt).
 
 # Product Assistance
 
@@ -78,11 +77,11 @@ You can access online information for BMC products via our Support Center site a
 
 At BMC, we strive to make our products and documentation the best in the industry. Feedback from our customers helps us maintain our quality standards. If you need support services, please obtain the following information before calling BMC\'s 24-hour telephone support:
 
-- The Azure pipeline job output that contains any error messages or pertinent information.
+- The Github pipeline job output that contains any error messages or pertinent information.
 
 - The name, release number, and build number of your product. This information is displayed in the installed extensions page. Apply filter: BMC in order to display all of the installed BMC extension.
 
-- Environment information, such as the operating system and release on which the Topaz CLI is installed.
+- Environment information, such as the operating system and release on which the Workbench CLI is installed.
 
 You can contact BMC in one of the following ways:
 
