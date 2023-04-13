@@ -3,7 +3,7 @@ The BMC AMI DevX Data Studio extension can be used to execute either Unit or Fun
 
 # BMC AMI DevX Data Studio
 
-This allows your GitHub Actions workflow to execute an automated test using Total Test. This action uses Total Test scenarios stored in your local Eclipse workspace. <br>
+This allows your GitHub Actions workflow to execute an automated test using DevX Data Studio. This action uses Total Test scenarios stored in your local Eclipse workspace. <br>
           
 # Table of Contents
 
@@ -29,12 +29,12 @@ This allows your GitHub Actions workflow to execute an automated test using Tota
 * Triggers the workflow to execute the provided test scenario on any pipeline where the BMC AMI DevX Data Studio Auto Run is added. 
 * Steps to use the extension
   * Install the BMC AMI DevX workbench CLI into local system, Click [here](https://download.api.compuware.com/web/private/66jvM2Rf5dcHtVjXdYhudGtRn9CtHzYq/test-management/results.html).
-  * CLI Execution path - Go to the local drive of a system and check the .bat file location i.e "C:\\BMC AMI DevX\\topazworkbenchcli.20.12.03.134\\".
-  * HCI Connection - Provide the HCI connection i.e CW01.bmc.com
-  * Port - Provide the HCI connection port number i.e 16196
-  * Test Location Path - Test location path is your local path where you test cases being executed i.e    "C:\\Users\\your_username\\BMC\\Workbench\\workspace\\CLI_CWKTCOBX\\Tests\\Scenarios"
-  * CLI path - Provide the CLI path where a workspace available i.e. "C:\\Users\\your_username\\git\\TED\\work\\workspace\\Security_Vulnerability\\TopazCliWkspc"
-  * HCI user id - Provide you user id which can connect to MF
+  * CLI path - Go to the local drive of a system and check the .bat file location i.e C:\Users\Public\Compuware\TopazCLI\TedCLI.bat
+  * Repository – File-AID Ex Repository where specification are stored
+  * Specification List – File-AID EX Specification Name & Type seperated by space
+  * Execution Context - Context property file where all communication, exection host etc. details mentioned
+  * Target Host - Provide the name of the VM in which the self-hosted runner is deployed.
+  * HCI UserID - Provide you user id which can connect to MF
   * Password - Configure you MF password in "Github Repository" -> Settings-> Secrets-> Actions-> New repository secret
      
  
@@ -45,10 +45,10 @@ This allows your GitHub Actions workflow to execute an automated test using Tota
 | --- | --- | --- |
 | CLI Execution path | Required  | CLI execution path is the location where it is installed locally, provide path till .bat folder  |
 | Repository | Required  | File-AID Ex Repository where specification are stored |
-| Specification Llist | Required  | File-AID EX Specification Name & Type seperated by space |
+| Specification List | Required  | File-AID EX Specification Name & Type seperated by space |
 | Execution Context | Required  | Context property file where all communication, exection host etc. details mentioned |
 | HCI UserID  | Required  | Provide your Mainframe User ID |
-| Target Host  | Required  | VM name where self-hosted runners is deplyed |
+| Target Host  | Required  | VM name where self-hosted runners is deployed |
 | Password  | Required  | "Github Repository" -> Settings-> Secrets-> Actions-> New repository secret |
 
 
