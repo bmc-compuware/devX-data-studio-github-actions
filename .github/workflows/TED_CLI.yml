@@ -13,17 +13,17 @@ on:
         required: true
       repository:
         # repository server input from the user.
-        description: repository
+        description: Repository
         default: ""
         required: true        
       specification-list:
         # specification input from the user.
-        description: specification-list
+        description: Specification List
         default: ""
         required: true
       execution-context:
         # execution-context server input from the user.
-        description: execution-context
+        description: Execution Context
         default: ""
         required: true
      
