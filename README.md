@@ -1,9 +1,6 @@
-# Overview
-The BMC AMI DevX Data Studio extension can be used to execute either Unit or Functional test scenarios automatically. 
-
 # BMC AMI DevX Data Studio
 
-This allows your GitHub Actions workflow to execute an automated test using DevX Data Studio. This action uses Total Test scenarios stored in your local Eclipse workspace. <br>
+The Data Studio action allows your GitHub Actions workflow to trigger automation to speed data extraction, privatization and loading using existing DevX Data Studio specifications defined within Workbench for Eclipse. <br>
           
 # Table of Contents
 
